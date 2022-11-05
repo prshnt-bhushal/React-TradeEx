@@ -1,0 +1,98 @@
+body.activeModal{
+    overflow-y: hidden;
+}
+.showModal{
+    position: fixed;
+    top: 10%;
+    right: 22%;
+}
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: rgba(49,49,49,0.8);
+}
+.productUploadContainer{
+    position: fixed;
+    top: 15%;
+    left:40%;
+    display: grid;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(219, 219, 219);
+    box-shadow: 1px 2px 6px 2px rgb(214, 213, 213);
+    height: fit-content;
+    width: fit-content;
+    justify-items: center;
+}
+.productDetails i{
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+}
+h4{
+    margin: 5px 0;
+}
+/* .productDetails, .productImages{
+    display: grid;
+    margin: 4px;
+    grid-row-gap: 2px;
+} */
+.productDetails textarea{
+    resize: none;
+    background: none;
+    outline:none;
+    border: none;
+    line-height: 1;
+    font-weight: 100;
+    font-size: 1.1rem;
+    color: #333;
+}
+.input-field1, .input-textarea{
+    max-width: 400px;
+    width: 100%;
+    height: 35px;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border-radius: 35px;
+    padding: 0 0.4rem;
+    position: relative;
+}
+.priceValue{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.priceValue h4{
+    margin-right: 2px;
+    color: #acacac;
+    font-size: 1.5rem;
+}
+input,select{
+    background: none;
+    outline:none;
+    border: none;
+    line-height: 1;
+    font-weight: 100;
+    font-size: 1.1rem;
+    color: #333;
+}
+.toastShow{
+    position: absolute;
+}
+@media screen and (max-width: 925px) {
+    .showModal{
+        top: 15%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .showModal{
+        top: 15%;
+        right: 1%;
+    }
+}

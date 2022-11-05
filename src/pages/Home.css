@@ -1,0 +1,31 @@
+.containerBox{
+    display: grid;
+    width: 79%;
+    /* grid-template-rows: 150px auto ; */
+}
+.homeContainer{
+    display: grid;
+    align-content: center;
+    margin-top: 130px;
+    margin-left: 2%;
+    margin-bottom: 1%;
+    /* box-sizing: border-box;
+    box-shadow: 1px 2px 6px 2px rgb(219 219 219); */
+    height: fit-content;
+    width: 97%;
+    padding: 1%;
+}
+.content-container{
+    display: grid;
+    grid-template-rows: 1fr;
+}
+@media screen and (max-width: 778px) {
+    .homeContainer{
+        margin-top: 170px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .containerBox{
+        width: 100%;
+    }
+  }
