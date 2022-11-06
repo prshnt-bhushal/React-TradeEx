@@ -9,6 +9,7 @@ import { collection,onSnapshot } from 'firebase/firestore'
 function Home() {
 
   const [posts,setPost] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(()=>{
     
@@ -31,12 +32,23 @@ function Home() {
     <div className='containerBox'>
       <div className='homeContainer'>
       <div className='search-box'>
-            <input type='text' placeholder='Search'/>
+            <input type='text' placeholder='Search' onChange={(e)=>setSearchTerm(e.target.value)}/>
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div className='content-container'>
         
-               {posts.map(renderFunction)}
+        {posts.filter((post)=>{
+      if(searchTerm == ""){
+        return post;
+      }else if(post.bookName.toLowerCase().includes(searchTerm.toLowerCase())){
+         return post;
+      }else if(post.author.toLowerCase().includes(searchTerm.toLowerCase())){
+        return post;
+      }else if(post.category.toLowerCase().includes(searchTerm.toLowerCase())){
+        return post;
+      }
+    }).map(renderFunction)}
+              
         </div>
       </div>
       <SideBar/>
