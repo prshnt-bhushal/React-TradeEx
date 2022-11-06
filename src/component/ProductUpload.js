@@ -15,13 +15,16 @@ import { useNavigate } from 'react-router-dom'
 function ProductUpload() {
 
  const navigate = useNavigate();
-  const [productName, setProductName] = useState('');
+  const [bookName, setBookName] = useState('');
   const [selectValue, setSelectValue] = useState('');
-  const [brand,setBrand] = useState('');
-  const [productDescription, setProductDescription] = useState('');
-  const [productPrice,setProductPrice] = useState();
+  const [author,setAuthor] = useState('');
+  const [publication,setPublication] = useState('');
+  const [bookDescription, setBookDescription] = useState('');
+  const [bookPrice,setBookPrice] = useState();
   const [imageFile, setImageFile] = useState(null);
   const [currentUserId,setUserId] = useState(null);
+
+  const user_name =auth.currentUser.displayName;
 
   useEffect(()=>{
     setInterval(()=>{
@@ -40,13 +43,15 @@ function ProductUpload() {
       getDownloadURL(imgRef).then((url)=>{
           const imgUrl = url;
 
-            const dataObject = {
-                productName : productName,
+            const dataObject =  {
+                bookName : bookName,
                 category: selectValue,
-                brand: brand,
-                productDescription: productDescription,
-                productPrice: productPrice,
+                author: author,
+                publication:publication,
+                bookDescription: bookDescription,
+                bookPrice: bookPrice,
                 postedUserId: currentUserId,
+                postedUser:user_name,
                 postUrl: imgUrl
             } 
    
@@ -84,30 +89,37 @@ function ProductUpload() {
   
   return (
     <div className='showModal'>
-      <button onClick={toggleModal} className='btn-modal'>Add product</button>
+      <button onClick={toggleModal} className='btn-modal'>Add Books</button>
       {
         modal && (
           <div className='overlay'>
             <div className='productUploadContainer'>
         <div className='productDetails'>
         <i onClick={toggleModal} class="fa-solid fa-circle-xmark"></i>
-            <h4>Product Details:</h4>
-            <input type='text' id='name' placeholder='Name of the product' className='input-field1' onChange={(e)=>setProductName(e.target.value)}/>
+            <h4>Book Details:</h4>
+            <input required type='text' id='Name' placeholder='Name' className='input-field1' onChange={(e)=>setBookName(e.target.value)}/>
             <div className='input-selection'>
-            <select id="select-category" onChange={(e)=> setSelectValue(e.target.value)}>
-                      Choose Category
-                     <option value="none" selected disabled hidden>Select an Option</option>
-                     <option>clothes</option>
-                     <option>Books</option>
-                     <option>others</option>
+            <select required id="select-category" onChange={(e)=> setSelectValue(e.target.value)}>
+                     <option value="none" selected disabled hidden>Category</option>
+                     <option>Novel</option>
+                     <option>Thriller</option>
+                     <option>Educational</option>
+                     <option>Bussiness</option>
+                     <option>History</option>
+                     <option>Biography</option>
+                     <option>Mystery</option>
+                     <option>Fiction</option>
+                     <option>Fantasy</option>
+                     <option>Others</option>
              </select>
             </div>
-            <input className='input-field1' type='text' id='brand' placeholder='Brand' onChange={(e)=>setBrand(e.target.value)}/>
-            <div className='input-textarea'><textarea id='description' cols='30' rows='3' placeholder='Product Description' onChange={(e)=>setProductDescription(e.target.value)}/></div>
+            <input required className='input-field1' type='text' id='Author' placeholder='Author' onChange={(e)=>setAuthor(e.target.value)}/>
+            <input required className='input-field1' type='text' id='Publication' placeholder='Published year /Edition' onChange={(e)=>setPublication(e.target.value)}/>
+            <div className='input-textarea'><textarea id='description' cols='30' rows='3' placeholder='Description' onChange={(e)=>setBookDescription(e.target.value)}/></div>
             <div className='productPrice'>
                 <h4>Price:</h4>
                 <div className=' priceValue'>
-                  <h4>Nrs.</h4><input className='input-field1' id='price' type='number' placeholder='Offered price' onChange={(e)=>setProductPrice(e.target.value)}/>
+                  <h4>Nrs.</h4><input required className='input-field1' id='price' type='number' placeholder='Offered price' onChange={(e)=>setBookPrice(e.target.value)}/>
                 </div>
             </div>
             <div className='productImages'>
@@ -132,3 +144,4 @@ function ProductUpload() {
 }
 
 export default ProductUpload
+

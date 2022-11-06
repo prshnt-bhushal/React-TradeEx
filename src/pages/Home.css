@@ -6,7 +6,7 @@
 .homeContainer{
     display: grid;
     align-content: center;
-    margin-top: 130px;
+    margin-top: 6%;
     margin-left: 2%;
     margin-bottom: 1%;
     /* box-sizing: border-box;
@@ -17,15 +17,40 @@
 }
 .content-container{
     display: grid;
+    margin-top: 5%;
     grid-template-rows: 1fr;
 }
+.search-box{
+    background: #fff;
+    width: 400px;
+    border-radius: 20px;
+    display: flex;
+    position: fixed;
+    right: 30%;
+    align-items: center;
+    padding: 0 15px;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+    }
+    .search-box img{
+    width: 18px;
+    }
+    .search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    }
 @media screen and (max-width: 778px) {
     .homeContainer{
-        margin-top: 170px;
+        margin-top: 15%;
     }
 }
 @media screen and (max-width: 700px) {
     .containerBox{
         width: 100%;
     }
+    .search-box{
+        width: 200px;
+      }
   }

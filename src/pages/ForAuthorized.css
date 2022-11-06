@@ -1,0 +1,23 @@
+.adminContainer{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.login-box{
+    display: grid;
+    grid-row-gap: 20px;
+    width: 400px;
+    height: 500px;
+    align-content: center;
+    justify-content: center;
+}
+input{
+    border: 1px solid black;
+}

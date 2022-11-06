@@ -18,8 +18,8 @@ function SideBar() {
             <img id='ad-image' src='/images/advertisement.png' alt='ads-photos'/>
         </div>
         <div className='imp-links'>
-            <Link>
-            <i class="fa-regular fa-newspaper"></i>Latest Update
+            <Link to ='/profile'>
+            <i class="fa-solid fa-user"></i>Your Profile
             </Link>
             <Link to='/'>
             <i class="fa-solid fa-shop"></i>Market
@@ -28,9 +28,9 @@ function SideBar() {
             <i class="fa-regular fa-message"></i>Messages
             </Link>
             <Link>
-            <i class="fa-regular fa-bookmark"></i>Saved
+            <i class="fa-regular fa-bookmark"></i>policy
             </Link>
-            <Link>
+            <Link to ='/aboutus'>
             <i class="fa-solid fa-info"></i>About Us
             </Link>
         </div>

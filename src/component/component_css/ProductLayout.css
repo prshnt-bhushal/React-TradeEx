@@ -23,14 +23,45 @@
     border-top-right-radius: 10px;
     background-color: grey;
 }
-.requestExchangebtn{
+.middleSection{
     display: grid;
+    padding-left:10px ;
+}
+.username{
+    font-weight: 100;
+    font-style: italic;
+    text-transform: capitalize;
+}
+.requestExchangebtn,.deletePostBtn{
+    display: grid;
+    position: relative;
     justify-content: center;
     align-content: center;
 }
+.requestExchangebtn:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(219, 219, 219);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 0.1s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 85%;
+}.requestExchangebtn:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
 .requestExchangebtn img{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 .productDetails{
     grid-template-rows: 20% 10% 70%;

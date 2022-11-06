@@ -29,9 +29,13 @@ function Home() {
   }
   return (
     <div className='containerBox'>
-      <Header/>
       <div className='homeContainer'>
+      <div className='search-box'>
+            <input type='text' placeholder='Search'/>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
         <div className='content-container'>
+        
                {posts.map(renderFunction)}
         </div>
       </div>

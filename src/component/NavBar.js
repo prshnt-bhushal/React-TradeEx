@@ -23,10 +23,10 @@ function NavBar() {
         <Link to='/'>
         <img src='/images/logoName.png' alt='mainLogo' className='logo'/>
         </Link>
-        <div className='search-box'>
+        {/* <div className='search-box'>
             <input type='text' placeholder='Search'/>
             <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+        </div> */}
     </div>
     <div className="nav-right-section">
         {
