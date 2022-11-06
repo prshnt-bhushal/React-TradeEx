@@ -5,7 +5,7 @@ function ProductDetails() {
   return (
     <div className='productDetailsContainer'>
       <div className='productDetailsBox'>
-        <img className='productImage' src='/images/user-icon.png'/>
+        <img className='productImagepage' src='/images/user-icon.png'/>
         <div className='productDetails'>
           <div className='userInfo'>
             <h2>Username</h2>

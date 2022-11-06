@@ -10,11 +10,13 @@ import { ref } from 'firebase/storage'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom'
+import LoadingSpinner from './LoadingSpinner'
 
 
 function ProductUpload() {
 
  const navigate = useNavigate();
+ const [isLoading, setIsLoading] = useState(false);
   const [bookName, setBookName] = useState('');
   const [selectValue, setSelectValue] = useState('');
   const [author,setAuthor] = useState('');
@@ -34,6 +36,7 @@ function ProductUpload() {
 
   function uploadPost(){
     alert("Your Product is Uploading")
+    setIsLoading(true);
 
     if(imageFile==null)
     return;
@@ -57,11 +60,14 @@ function ProductUpload() {
    
      const docRef = collection(db,'posts')
      addDoc(docRef,dataObject).then((userRef)=>{
+        setIsLoading(false);
         alert('Product Uploaded Successfully')
         navigate('/profile');
-        window.location.reload();
+        setModal(!modal);
+        // window.location.reload();
      }).catch((error)=>{
       alert(error.message);
+      setIsLoading(false);
      })
         })
   }).catch((error)=>{
@@ -88,6 +94,8 @@ function ProductUpload() {
     }
   
   return (
+    <>
+    {isLoading && <LoadingSpinner/>}
     <div className='showModal'>
       <button onClick={toggleModal} className='btn-modal'>Add Books</button>
       {
@@ -128,7 +136,7 @@ function ProductUpload() {
         </div>
         </div>
         <div className='uploadbtn'>
-            <button onClick={uploadPost}>Upload</button>
+            <button onClick={uploadPost} disabled={isLoading}>Upload</button>
         </div>
         <div className='toastshow'>
         <ToastContainer/>
@@ -139,7 +147,7 @@ function ProductUpload() {
         )
       }
     </div>
-   
+    </>
   )
 }
 

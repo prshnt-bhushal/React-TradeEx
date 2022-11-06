@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ButtonMailTo from './ButtonMailTo';
 import './component_css/ProductLayout.css'
+// import Mailto from 'react-mailto'
 
 function ProductLayout(props) {
+  // const [mail,setMail]=useState('');
 
-  function requestExchange(){
-    <ButtonMailTo label="Write me an E-Mail" mailto="mailto:no-reply@example.com" />
-  }
+  // function requestExchange(props){
+  //   setMail=props;
+  //   <Mailto email={mail}>
+  //   </Mailto>
+  // }
 
  const userPost = props.post;
   return (
@@ -23,7 +27,7 @@ function ProductLayout(props) {
         <div className='username'>posted by:{userPost.postedUser}</div>
         </div>
         
-        <div className='requestExchangebtn' data-hover='Request Exchange'><img onClick={requestExchange} src='/images/request-item.png'/></div>
+        <div className='requestExchangebtn' data-hover='Request Exchange'><img src='/images/request-item.png'/></div>
     </div>
   )
 }
