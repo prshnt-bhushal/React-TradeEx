@@ -6,7 +6,18 @@ import './Home.css'
 import { db } from '../FirebaseConfig'
 import { collection,onSnapshot } from 'firebase/firestore'
 
+import PolicyPopup from '../component/PolicyPopup'
+
 function Home() {
+
+  const [timedPopup,setTimedPopup]=useState(false);
+ 
+  useEffect(()=>{
+    setTimeout (()=>{
+      setTimedPopup(true);
+    },3000);
+  },[]);
+ 
 
   const [posts,setPost] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -30,6 +41,12 @@ function Home() {
   }
   return (
     <div className='containerBox'>
+      <PolicyPopup trigger ={timedPopup} setTrigger ={setTimedPopup}>
+        <h3>Our Policies</h3>
+        <img  src='/images/policy1.png'></img>
+        {/* <img src='/images/policy2.png'></img>
+        <img src='/images/policy3.png'></img> */}
+      </PolicyPopup>
       <div className='homeContainer'>
       <div className='search-box'>
             <input type='text' placeholder='Search' onChange={(e)=>setSearchTerm(e.target.value)}/>
