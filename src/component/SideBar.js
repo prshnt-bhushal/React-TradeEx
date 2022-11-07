@@ -31,15 +31,15 @@ function SideBar() {
             <img id='ad-image' src='/images/advertisement.png' alt='ads-photos'/>
         </div>
         <div className='imp-links'>
+        <Link to='/'>
+            <i class="fa-solid fa-house"></i>Home
+            </Link>
             <Link to ='/profile'>
             <i class="fa-solid fa-user"></i>Your Profile
             </Link>
-            <Link to='/'>
-            <i class="fa-solid fa-shop"></i>Market
-            </Link>
-            <Link>
+            {/* <Link>
             <i class="fa-regular fa-message"></i>Messages
-            </Link>
+            </Link> */}
             <Link>
             <i class="fa-regular fa-bookmark"></i>policy
             </Link>

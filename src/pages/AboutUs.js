@@ -1,16 +1,16 @@
 import React from 'react'
 import './AboutUs.css'
-import SideBar from '../component/SideBar'
+import Sidebar from '../component/SideBar'
 import UserLayout from '../component/UserLayout'
 import { Link } from 'react-router-dom'
 
 function Aboutus() {
   return (
     <div className='aboutUsContainer'>
-        <SideBar/>
+      <Sidebar/>
+      <img src='/images/panelImg'/>   
         <div className='aboutUsContent'>
-            <h1>ABOUT TradeEX</h1>
-            <p>Explore Below</p>
+          <h1>About TradeEx</h1>
             <div className="heading">
         <p>
           TradeEX is web-based goods exchanging dedicated application. We run as
@@ -20,8 +20,16 @@ function Aboutus() {
            middleman between two customers. 
           The exchange can be between any two products as long as both parties are in agreement.
         </p>
-      </div>
-      <div className="input">
+    </div>
+      
+      <div className='footer-container'>
+          
+          <div className='footer-subscription'>
+            <p className='footer-subscription-heading'>
+                Join the newsletter to receive our updates and benefits!
+            </p>
+            </div>
+      <div className="input-areas">
         <form>
           <input
             type="email"
@@ -32,23 +40,44 @@ function Aboutus() {
           <button>Send Feedback</button>
         </form>
       </div>
-      <div className='representative'>
+      </div>
+      
+      <div className='users'>
          <h1>Meet our team!</h1>
          <div className='users__container'>
             <div className='users__wrapper'>
             <ul className='users__item'>
                   <UserLayout src='/images/user1.png'
-                  text='Mr. RN Sharma, TradeEX Head'
-                  label='Authorized Representative '
+                  text='Mr. RN Sharma,
+                  Central Authorized Representative,
+                  TradeEX
+                  Roles
+                  Co-ordinates and controls all the activities of departments
+                  Manages the branch representatives
+                  Holds timely meetings and discusses stats'
+                   label='Authorized Representative '
                   path='/'/>
                    
+                  
                   <UserLayout src='/images/user2.png'
-                  text='Mr. Harinarayan Pandey'
+                  text='Mr. Harinarayan Pandey, Supervising Officer
+                  <u>Roles</u>
+                  Supervises the valaution department
+                  Make sure all are within compliance of policies of company
+                  Notifies the updates and ciculates among all departments'
                    label='Supervising Officer '
                    path='/'/> 
                   
                   <UserLayout src='/images/user3.png'
-                  text='Contact at support@tradeex.inc'
+                  text='Customer Support Representative,
+                  Contact at support@tradeex.inc
+                  <u>Roles</u>
+                  Manages all the user complaints
+                  Reports to customer services
+                  Make sure complaints gets resolved timely
+
+
+                  '
                    label='Customer Support'
                    path='/'/>  
                 </ul>
@@ -56,10 +85,11 @@ function Aboutus() {
          </div>
         </div>
         <div>
+       
         <section class="social-media">
         <div class="social-media-wrap">
           <div class="footer-logo">
-          <small class="website-rights">TradeEXÂ© 2022</small>
+         
           
           <div class="social-icons">
             <Link
@@ -103,7 +133,9 @@ function Aboutus() {
               <i class="fab fa-linkedin" />
             </Link>
           </div>
+            <small class="website-rights">Last Updated November, 2022 || Â©TradeEX</small>
         </div>
+        <button className='btn'>Goto HomePage</button>
         </div>
       </section>
         </div>
