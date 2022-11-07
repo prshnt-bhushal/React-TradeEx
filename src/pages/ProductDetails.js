@@ -6,7 +6,7 @@ function ProductDetails() {
     <div className='productDetailsContainer'>
       <div className='productDetailsBox'>
         <img className='productImagepage' src='/images/user-icon.png'/>
-        <div className='productDetails'>
+        <div className='productDetail'>
           <div className='userInfo'>
             <h2>Username</h2>
             {/* <h3>Contact Info:</h3>
@@ -24,9 +24,12 @@ function ProductDetails() {
             <p>Description</p>
             </div>  
         </div>
-        <div className='requestExchangebtn' data-hover='Request Exchange'><img src='/images/request-item.png'/></div> 
+        <div className='requestE' data-hover='Request Exchange'><img src='/images/request-item.png'/></div> 
       </div>  
-      <div className='RecommendationBox'></div>  
+      <div className='RecommendationBox'>
+        <h1>Similar Products</h1>
+        <div className='RecommendationProducts'></div>
+        </div>  
     </div>
   )
 }

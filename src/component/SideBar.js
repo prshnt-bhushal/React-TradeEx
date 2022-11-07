@@ -1,13 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './component_css/SideBar.css'
-
-function btnCloseClick(){
-  // const ads =document.getElementById('ad-image');
-  alert('Just watch it')
-}
+import { useState } from 'react'
+import Policy from './Policy'
 
 function SideBar() {
+  function btnCloseClick(){
+    // const ads =document.getElementById('ad-image');
+    alert('Just watch it')
+  }
+  // const [modal, setModal]=useState(false);
+  
+  // const toggleModal =()=>{
+  //     setModal(!modal)
+  //   }
+  //   if(modal){
+  //     document.body.classList.add('activeModal');
+  //   }
+  //   else{
+  //     document.body.classList.remove('activeModal');
+  //   }
+
   return (
     <div className='right-sidebar'>
         <div className='ads'>

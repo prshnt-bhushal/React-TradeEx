@@ -1,20 +1,20 @@
-/* .productDetailsContainer{
+.productDetailsContainer{
     display: grid;
     grid-template-rows: 70% 30%;
     align-items: center;
     justify-items: center;
     grid-row-gap: 5px;
-    background-color: blue;
+    background-color:aliceblue;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
 
 }
-.requestExchangebtn img{
-    width: 100%;
-    height: 100%;
+.requestE img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
 .productDetailsBox{
-    background-color:aqua;
     width: 96%;
     height: 96%; 
     display:grid;
@@ -32,7 +32,7 @@
 .productImagepage:hover{ 
     box-shadow: 1px 0px 9px 1px #ababf3;
 }
-.productDetails{
+.productDetail{
     display: grid;
     position: relative;
     grid-template-rows: 50% 10% 20%;
@@ -61,7 +61,15 @@
     height: 48px;
 }
 .RecommendationBox{
-    background-color:aliceblue;
+    display: block;
+    margin-top: 7%;
     width: 96%;
     height: 96%;  
-} */
+}.RecommendationBox h1{
+    padding-bottom:4px ;
+   border-bottom: 1px solid black;  
+}
+.RecommendationProducts{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+}

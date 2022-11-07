@@ -1,0 +1,9 @@
+body.activeModal{
+    overflow-y: hidden;
+}
+.showModalContainer{
+    position: fixed;
+    top: 10%;
+    right: 22%;
+    z-index: 4;
+}
