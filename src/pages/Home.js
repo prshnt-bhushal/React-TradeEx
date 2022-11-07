@@ -41,12 +41,6 @@ function Home() {
   }
   return (
     <div className='containerBox'>
-      <PolicyPopup trigger ={timedPopup} setTrigger ={setTimedPopup}>
-        <h3>Our Policies</h3>
-        <img  src='/images/policy1.png'></img>
-        {/* <img src='/images/policy2.png'></img>
-        <img src='/images/policy3.png'></img> */}
-      </PolicyPopup>
       <div className='homeContainer'>
       <div className='search-box'>
             <input type='text' placeholder='Search' onChange={(e)=>setSearchTerm(e.target.value)}/>
@@ -69,6 +63,11 @@ function Home() {
         </div>
       </div>
       <SideBar/>
+      <PolicyPopup trigger ={timedPopup} setTrigger ={setTimedPopup}>
+        <img src='/images/logoName.png'></img>
+        <h3>Why To Buy, When you can Exchange</h3>
+        {/* <img src='/images/policy3.png'></img> */}
+      </PolicyPopup>
     </div>
   )
 }

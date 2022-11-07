@@ -1,11 +1,11 @@
-.showModalContainer{
+.optionChooseContainer{
     display: grid;
     width: 79%;
 }
-.policyContainer{
+.optionChoose{
     display: grid;
     grid-template-rows: 1fr;
-    justify-items: center;
+    align-content: center;
     margin-top: 8%;
     margin-left: 2%;
     margin-bottom: 1%;
@@ -14,12 +14,12 @@
     padding: 1%; 
 }
 @media screen and (max-width: 925px) {
-    .policyContainer{
+    .optionChoose{
         margin-top: 20%;
     }
 }
 @media screen and (max-width: 700px) {
-    .showModalContainer{
+    .optionChooseContainer{
         width: 100%;
     }
   }

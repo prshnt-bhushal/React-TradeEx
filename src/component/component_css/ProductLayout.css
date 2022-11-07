@@ -67,3 +67,10 @@
 .productDetails{
     grid-template-rows: 20% 10% 70%;
 }
+
+.finalChooiceBox{
+    cursor: pointer;
+}
+.finalChooiceBox:hover{
+    box-shadow: 1px 0px 9px 1px #ababf3;
+}

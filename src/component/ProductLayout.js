@@ -1,24 +1,25 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import ButtonMailto from './ButtonMailTo'
 import './component_css/ProductLayout.css'
 // import Mailto from 'react-mailto'
 
 function ProductLayout(props) {
 
-  function sendEmail(){
-    window.location = `mailto:${userPost.postUserEmail}?subject=Exchange Requested&body=I want to trade this book ${userPost.bookName}`;
-    console.log('clicked');
-  }
-  // const [mail,setMail]=useState('');
+  const navigate=useNavigate();
+  
 
-  // function requestExchange(props){
-  //   setMail=props;
-  //   console.log('pressed');
-  //   <ButtonMailto label="Write me an E-Mail" mailto="mailto:no-reply@example.com" />
+  // function sendEmail(){
+  //   window.location = `mailto:${userPost.postUserEmail}?subject=Exchange Requested&body=I want to trade this book ${userPost.bookName}`;
+  //   console.log('clicked');
   // }
+
+
 
  const userPost = props.post;
  const userId = userPost.postedUserId;
+
   return (
     <div className='ProductLayoutContainer'>
         <div className='productImage'><img src={userPost.postUrl}/></div>
@@ -33,7 +34,12 @@ function ProductLayout(props) {
         <div className='username'>posted by:{userPost.postedUser}</div>
         </div>
         
-        <div onClick= { () => sendEmail()} className='requestExchangebtn' data-hover='Request Exchange'><img src='/images/request-item.png'/></div>
+        <div className='requestExchangebtn' data-hover='Request Exchange'><Link to ={{
+          pathname: '/choose-option',
+          // state:userPost.postUserEmail
+        }}>
+          <img src='/images/request-item.png'/>
+          </Link></div>
     </div>
   )
 }

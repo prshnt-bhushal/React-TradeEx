@@ -28,7 +28,9 @@ function ProductDetails() {
       </div>  
       <div className='RecommendationBox'>
         <h1>Similar Products</h1>
-        <div className='RecommendationProducts'></div>
+        <div className='RecommendationProducts'>
+          
+        </div>
         </div>  
     </div>
   )

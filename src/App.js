@@ -11,6 +11,9 @@ import ForAdminRegister from './pages/ForAdminRegister';
 import { useState } from 'react';
 import AboutUs from './pages/AboutUs';
 import ProductDetails from './pages/ProductDetails';
+import OptionChoose from './pages/OptionChoose';
+import Policy from './component/Policy';
+import ForgetPassword from './pages/ForgetPassword';
 
 
 
@@ -25,12 +28,15 @@ function App() {
           <Route path="/signup-login" element={<Signup />} />
           <Route path='/admin' exact element={<ForAuthorized setLoggedin={setLoggedin}/>}/>
           <Route path='/admin-register' exact element={<ForAdminRegister/>}/>
+          <Route path='/forget-password' exact element={<ForgetPassword/>}/>
           <Route path='/product'exact element={<ProductDetails/>}/>
         </Route>
         <Route element={<WithNav />}>
         <Route path='/' exact element={<Home/>}/>
         <Route path='/profile' exact element={<ProfilePage/>}/>
         <Route path='/aboutus'exact element={<AboutUs/>}/>
+        <Route path='/choose-option'exact element={<OptionChoose/>}/>
+        <Route path='/policy'exact element={<Policy/>}/>
         </Route>
         </Routes>
       </Router>

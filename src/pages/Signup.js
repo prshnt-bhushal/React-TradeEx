@@ -83,7 +83,7 @@ function Signup() {
               <input type="password" name="password" id="sign-in-password" placeholder="Password" onChange={(e)=>setLoginPass(e.target.value)}/>
             </div>
             <div className='forget-pass'>
-            <Link to='#'>Forget Password?
+            <Link to='/forget-password'>Forget Password?
             </Link>
             </div>
             <button onClick={btnloginclick} type="button" id="btn-login" disabled={isLoading} class="btn solid">LOGIN</button>

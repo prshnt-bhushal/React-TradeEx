@@ -1,6 +1,6 @@
 .popup{
     position: fixed;
-    top:10%;
+    top:0;
     left:0;
     width: 100vw;
     height: 100vh;
@@ -16,7 +16,7 @@
     position: relative;
     padding: 32px;
     width: 100%;
-    max-width: 640px;
+    max-width: 670px;
     background-color: #fff;
     display: grid;
     justify-items: center;
@@ -26,7 +26,7 @@
     position: absolute;
     cursor: pointer;
     top: 16px;
-    left: 16px;
+    right: 16px;
 }
 .popup-inner img{
     width: 90%;

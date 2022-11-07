@@ -37,11 +37,8 @@ function SideBar() {
             <Link to ='/profile'>
             <i class="fa-solid fa-user"></i>Your Profile
             </Link>
-            {/* <Link>
-            <i class="fa-regular fa-message"></i>Messages
-            </Link> */}
-            <Link>
-            <i class="fa-regular fa-bookmark"></i>policy
+            <Link to ='/policy'>
+            <i class="fa-regular fa-file-lines"></i>Policy
             </Link>
             <Link to ='/aboutus'>
             <i class="fa-solid fa-info"></i>About Us
