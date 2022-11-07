@@ -37,6 +37,7 @@
     position: relative;
     justify-content: center;
     align-content: center;
+    cursor: pointer;
 }
 .requestExchangebtn:before {
     content: attr(data-hover);

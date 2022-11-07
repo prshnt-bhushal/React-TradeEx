@@ -14,6 +14,7 @@ import LoadingSpinner from './LoadingSpinner'
 
 
 function ProductUpload() {
+  
 
  const navigate = useNavigate();
  const [isLoading, setIsLoading] = useState(false);
@@ -27,6 +28,7 @@ function ProductUpload() {
   const [currentUserId,setUserId] = useState(null);
 
   const user_name =auth.currentUser.displayName;
+  const userEmail =auth.currentUser.email;
 
   useEffect(()=>{
     setInterval(()=>{
@@ -55,7 +57,8 @@ function ProductUpload() {
                 bookPrice: bookPrice,
                 postedUserId: currentUserId,
                 postedUser:user_name,
-                postUrl: imgUrl
+                postUrl: imgUrl,
+                postUserEmail:userEmail
             } 
    
      const docRef = collection(db,'posts')

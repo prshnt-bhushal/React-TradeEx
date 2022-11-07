@@ -4,22 +4,28 @@ import { doc, deleteDoc , getDoc} from "firebase/firestore";
 import {db ,store_age} from ".././FirebaseConfig"
 import { refFromURL ,deleteObject} from "firebase/storage";
 import { ref } from "firebase/storage";
+
+
 function ProfileProductLayout(props) {
     const userPost = props.posttt;
-    console.log(userPost)
+    // console.log(userPost.uid)
+    
     const username =userPost.postedUserId
+    // console.log(username);
     function deleteProduct(){
-      getDoc(doc(db,'posts',username)).then((userPost)=>{
+      getDoc(doc(db,'posts',userPost.id)).then((userPost)=>{
+        // console.log(userPost.id)
+        // console.log(doc.id)
         const imgUrl= userPost.data().imageUrl;
         const imgRef = ref(store_age,imgUrl);
-        deleteObject(imgRef).then(()=>{
-          deleteDoc(doc(db,'posts',username)).then(()=>{
-            alert('succesfully deleted your blog')
+        //deleteObject(imgRef).then(()=>{
+          deleteDoc(doc(db,'posts',userPost.id)).then(()=>{
+            alert('succesfully deleted yout post')
       
           }).catch((error)=>{
              alert('Error occured');
           })
-        })
+        //})
       })
     }
   return (
