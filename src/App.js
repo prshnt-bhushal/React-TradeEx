@@ -36,7 +36,7 @@ function App() {
         <Route path='/' exact element={<Home/>}/>
         <Route path='/profile' exact element={<ProfilePage/>}/>
         <Route path='/aboutus'exact element={<AboutUs/>}/>
-        <Route path='/choose-option'exact element={<OptionChoose/>}/>
+        <Route path='/choose-option/:eMailTo/:ebookName'exact element={<OptionChoose/>}/>
         <Route path='/policy'exact element={<Policy/>}/>
         <Route path='/home-admin'exact element={<FromAdmin/>}/>
         </Route>

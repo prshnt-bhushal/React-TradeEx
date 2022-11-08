@@ -113,6 +113,7 @@ function ProductUpload() {
             <select required id="select-category" onChange={(e)=> setSelectValue(e.target.value)}>
                      <option value="none" selected disabled hidden>Category</option>
                      <option>Novel</option>
+                     <option>Manga</option>
                      <option>Thriller</option>
                      <option>Educational</option>
                      <option>Bussiness</option>

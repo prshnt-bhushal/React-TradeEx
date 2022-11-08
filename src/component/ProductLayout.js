@@ -34,10 +34,10 @@ function ProductLayout(props) {
         <div className='username'>posted by:{userPost.postedUser}</div>
         </div>
         
-        <div className='requestExchangebtn' data-hover='Request Exchange'><Link to ={{
-          pathname: '/choose-option',
+        <div className='requestExchangebtn' data-hover='Request Exchange'><Link to = {`/choose-option/${userPost.postUserEmail}/${userPost.bookName}`}
+        
           // state:userPost.postUserEmail
-        }}>
+        >
           <img src='/images/request-item.png'/>
           </Link></div>
     </div>

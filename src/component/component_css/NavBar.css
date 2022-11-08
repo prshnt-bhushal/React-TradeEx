@@ -42,6 +42,12 @@ nav
 .nav-right-section a:hover{
       color: #fff;
     }
+    .contribute{
+        cursor: pointer;
+      }    
+.contribute h4 :hover{
+    color: #fff;
+}
 
 .user-icon{
         width: 40px;
@@ -63,4 +69,4 @@ nav
           width: 200px;
         }
       }
-    
+      

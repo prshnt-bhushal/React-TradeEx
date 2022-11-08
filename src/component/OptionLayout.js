@@ -1,11 +1,15 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
 
 function OptionLayout(props) {
     const userPost = props.posttt;
 
+    const {eMailTo,ebookName} = useParams();
+   
+
     function sendEmail(){
         // ${userPost.postUserEmail}
-    window.location = `mailto:abc@gmail.com?subject=REQUEST TO EXCHANGE &body=I want to trade your book ${userPost.bookName} with my ${userPost.bookName} `;
+    window.location = `mailto:${eMailTo}?subject=REQUEST TO EXCHANGE &body=I want to trade your book ${ebookName} with my ${userPost.bookName} `;
     console.log('clicked');
   }
 

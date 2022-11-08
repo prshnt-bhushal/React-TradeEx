@@ -5,8 +5,8 @@ import { useAuth } from '../FirebaseConfig'
 import { auth } from '../FirebaseConfig'
 import { signOut } from 'firebase/auth'
 import { useState } from 'react'
-
-
+import config from '../khalti/KhaltiConfig'
+import KhaltiCheckout from "khalti-checkout-web";
 
 function NavBar() {
   const [userid,setUserId] = useState(null);
@@ -35,6 +35,14 @@ function NavBar() {
   },[])
   const currentUser=useAuth();
   const Loggedin=useAuth();
+
+  const payWithKhalti = ()=>{
+
+    let checkout = new KhaltiCheckout(config);
+        checkout.show({amount: 1000});
+    
+    
+  }
   return (
   <div>
   <nav>
@@ -48,9 +56,10 @@ function NavBar() {
         </div> */}
     </div>
     <div className="nav-right-section">
+      
        {link && <Link to='/signup-login'> Signup/Login</Link>}
+       {usernameExist && <Link onClick={payWithKhalti} to='#'>Contribute</Link>}
        {usernameExist && <Link to='/signup-login' onClick={logoutClick}> Logout: {userName}</Link> }
-        
         <Link to='/profile'>
                 <img src='/images/user-icon.png' className='user-icon'/>
         </Link>
