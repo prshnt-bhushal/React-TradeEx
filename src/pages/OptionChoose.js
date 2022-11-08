@@ -40,6 +40,7 @@ function OptionChoose(props) {
       <Sidebar/>
       <div className='optionChooseContainer'>
       <div className='optionChoose'>
+        <h2>Choose A Product For Exchange</h2>
       {posts.map(renderFunction)}
       </div>
       </div>

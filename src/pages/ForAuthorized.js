@@ -17,7 +17,7 @@ function ForAuthorized({setLoggedin}) {
             setIsLoading(true);
             localStorage.setItem('isAuth',true);
             setLoggedin(true);
-            navigate('/')
+            navigate('/home-admin')
             setLoggedin(false);
         }).catch((error)=>{
             setIsLoading(false);

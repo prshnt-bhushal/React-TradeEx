@@ -3,6 +3,11 @@
     width: 79%;
     /* grid-template-rows: 150px auto ; */
 }
+.admincontainerBox{
+    display: grid;
+    width: 100%;
+    /* grid-template-rows: 150px auto ; */
+}
 .homeContainer{
     display: grid;
     align-content: center;

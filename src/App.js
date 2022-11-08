@@ -14,6 +14,7 @@ import ProductDetails from './pages/ProductDetails';
 import OptionChoose from './pages/OptionChoose';
 import Policy from './component/Policy';
 import ForgetPassword from './pages/ForgetPassword';
+import FromAdmin from './pages/FromAdmin';
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route path='/aboutus'exact element={<AboutUs/>}/>
         <Route path='/choose-option'exact element={<OptionChoose/>}/>
         <Route path='/policy'exact element={<Policy/>}/>
+        <Route path='/home-admin'exact element={<FromAdmin/>}/>
         </Route>
         </Routes>
       </Router>
