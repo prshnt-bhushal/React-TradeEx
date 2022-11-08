@@ -9,7 +9,7 @@ function OptionLayout(props) {
 
     function sendEmail(){
         // ${userPost.postUserEmail}
-    window.location = `mailto:${eMailTo}?subject=REQUEST TO EXCHANGE &body=I want to trade your book ${ebookName} with my ${userPost.bookName} `;
+    window.location = `mailto:${eMailTo}?subject=REQUEST TO EXCHANGE &body=I want to trade your Book ${ebookName} with my ${userPost.bookName} Book `;
     console.log('clicked');
   }
 

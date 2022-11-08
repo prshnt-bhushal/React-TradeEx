@@ -65,7 +65,7 @@ function Home() {
       <SideBar/>
       <PolicyPopup trigger ={timedPopup} setTrigger ={setTimedPopup}>
         <img src='/images/logoName.png'></img>
-        <h3>Why To Buy, When you can Exchange</h3>
+        <h3>WHY TO BUY? WHEN YOU CAN EXCHANGE.</h3>
         {/* <img src='/images/policy3.png'></img> */}
       </PolicyPopup>
     </div>

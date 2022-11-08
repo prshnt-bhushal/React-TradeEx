@@ -3,8 +3,15 @@ import './AboutUs.css'
 import Sidebar from '../component/SideBar'
 import UserLayout from '../component/UserLayout'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 function Aboutus() {
+
+  const [feedback,setFeedback]=useState('');
+
+  function sendEmail(){
+window.location = `mailto:feedback@tradeex.com?subject=Feedback &body= ${feedback} `;
+}
   return (
     <div className='aboutUsContainer'>
       <Sidebar/>
@@ -32,12 +39,13 @@ function Aboutus() {
       <div className="input-areas">
         <form>
           <input
-            type="email"
-            name="email"
+            type="text"
+            name="text"
             placeholder="Your Feedback"
             className="footer-input"
+            onChange={(e)=>setFeedback(e.target.value)}
           />
-          <button>Send Feedback</button>
+          <button onClick={sendEmail} >Send Feedback</button>
         </form>
       </div>
       </div>
